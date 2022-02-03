@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="ekran" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="749.0" prefWidth="1361.0" spacing="20.0" styleClass="primary_color" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="musicly.controllers.ListeController">
+   <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="1361.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/ic_back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/ic_forward.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="26.0" prefWidth="161.0" styleClass="search-container" stylesheets="@../../css/style.css">
+               <children>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ic_search.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <TextField fx:id="searchBar" onKeyPressed="#arama" prefHeight="25.0" prefWidth="175.0" promptText="Ara" style="-fx-background-color: transparent;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+               </children>
+            </HBox>
+            <Pane prefHeight="38.0" prefWidth="146.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnAbonelik" mnemonicParsing="false" prefHeight="20.0" prefWidth="90.0" styleClass="upgrade-button" stylesheets="@../../css/style.css" text="ABONELİK" textFill="WHITE">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="175.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblUser" prefHeight="20.0" prefWidth="100.0" text="kullanıcı" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Button fx:id="btnCikis" alignment="CENTER" mnemonicParsing="false" onAction="#cikisYap" styleClass="cikis-button" stylesheets="@../../css/style.css" text="Çıkış Yap" textFill="WHITE" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="66.0" style="-fx-background-color: transparent;">
+               <children>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#kucult" prefHeight="30.0" prefWidth="30.0" styleClass="kucult-button" stylesheets="@../../css/style.css" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/minimize.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="30.0" prefWidth="30.0" styleClass="kapat-button" stylesheets="@../../css/style.css">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/cikis.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets right="3.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+      <HBox fx:id="baslik" alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+         <children>
+            <ImageView fx:id="imgKapak" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/pop.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="200.0" prefWidth="500.0">
+               <children>
+                  <Label text="ÇALMA LİSTESİ" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblListeAdi" layoutX="10.0" layoutY="10.0" text="POP" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="64.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblListeDetay" layoutX="10.0" layoutY="10.0" text="MEHMET - 3 TAKİPÇİ - 20 ŞARKI" textFill="#b3b3b3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnListeyeEkle" layoutX="1251.0" layoutY="179.0" mnemonicParsing="false" onAction="#tumunuEkle" styleClass="liste-button" stylesheets="@../../css/style.css" text="Tümünü Listeme Ekle">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="25.0" right="50.0" />
+         </padding>
+      </HBox>
+      <ScrollPane prefHeight="719.0" prefWidth="150.0" style="-fx-background-color: transparent;">
+         <content>
+            <VBox fx:id="vboxListe" prefHeight="460.0" prefWidth="1344.0" spacing="10.0">
+               <padding>
+                  <Insets left="25.0" right="25.0" />
+               </padding>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" spacing="25.0">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/play.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/ic_love.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="60.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/download.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="111.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/ic_more.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="200.0">
+                     <children>
+                        <Label prefWidth="25.0" text="#" textFill="#b3b3b3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="100.0" prefWidth="40.0" />
+                        <Label layoutX="10.0" layoutY="10.0" text="ŞARKI ADI" textFill="#b3b3b3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="72.0" layoutY="10.0" prefHeight="100.0" prefWidth="276.8" />
+                        <Label layoutX="38.0" layoutY="10.0" text="SANATÇI" textFill="#b3b3b3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="1304.0" layoutY="10.0" prefHeight="20.0" prefWidth="269.6" />
+                        <Label layoutX="66.0" layoutY="10.0" text="ALBÜM" textFill="#b3b3b3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="1304.0" layoutY="10.0" prefHeight="100.0" prefWidth="278.6" />
+                        <Label layoutX="94.0" layoutY="10.0" prefWidth="70.0" text="SÜRE" textFill="#b3b3b3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                  </HBox>
+                  <Separator prefWidth="200.0" style="-fx-border-color: #302628; -fx-border-width: 1;">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Separator>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>

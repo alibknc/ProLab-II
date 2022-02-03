@@ -1,0 +1,218 @@
+.primary_color{
+    -fx-background-color: #181818;
+}
+
+.secondary-color{
+    -fx-background-color: #121212;
+}
+
+.selected{
+    -fx-border-color: #1ED760;
+    -fx-border-width: 0 0 0 5
+}
+
+.top-border{
+    -fx-border-color: #A1A1A1;
+    -fx-border-width: 1 0 0 0;
+}
+
+.search-container{
+    -fx-background-color: #fff;
+    -fx-background-radius: 100;
+}
+
+.upgrade-button{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-border-color: #fff;
+    -fx-border-radius: 50;
+}
+
+.cikis-button{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-radius: 50;
+    -fx-border-color: #a1a1a1;
+    -fx-border-radius: 50;
+}
+
+.cikis-button:hover{
+    -fx-background-color: #a1a1a1;
+    -fx-border-color: #a1a1a1;
+    -fx-background-radius: 50;
+    -fx-border-radius: 50;
+    -fx-text-fill: #fff;
+}
+
+.liste-button{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-radius: 50;
+    -fx-border-color: #fff;
+    -fx-border-radius: 50;
+    -fx-text-fill: #fff;
+}
+
+.liste-button:hover{
+    -fx-background-color: #fff;
+    -fx-border-color: #fff;
+    -fx-background-radius: 50;
+    -fx-border-radius: 50;
+    -fx-text-fill: #121212;
+}
+
+.liste-button:pressed{
+    -fx-background-color: #a1a1a1;
+    -fx-border-color: #a1a1a1;
+    -fx-background-radius: 50;
+    -fx-border-radius: 50;
+    -fx-text-fill: #fff;
+}
+
+.kapat-button{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.kapat-button:hover{
+    -fx-background-color: #E81123;
+}
+
+.kucult-button{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.kucult-button:hover{
+    -fx-background-color: #4F5254;
+}
+
+.giris-button{
+    -fx-background-color:  #1DB954;
+}
+
+.giris-button:hover{
+    -fx-background-color: #21D460;
+}
+
+.anaSayfa-button{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.anaSayfa-button:hover{
+    -fx-background-color: #181818;
+}
+
+.sarki{
+    -fx-background-color: #181818;
+}
+
+.sarki:hover{
+    -fx-background-color: #121212;
+}
+
+.scroll-pane > .viewport{
+    -fx-background-color: #181818;
+}
+
+#tabPane {
+    -fx-tab-min-height: 5em;
+    /* 24 */
+    -fx-tab-max-height: 5em;
+    /* 24 */
+
+    -fx-tab-min-width: 0.5em;
+    -fx-tab-max-width: 0.5em;
+    -fx-padding: 0 -1 -1 0
+}
+
+.tab .tab-label {
+    -fx-background-color: transparent;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #FFF;
+}
+
+.tab{
+    -fx-background-color: #181818;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 0.0;
+    -fx-padding: 0 30 0 30;
+}
+
+.tab:selected
+{
+    -fx-background-color: #3FE387;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-border-width: 5 0 0 0;
+    -fx-border-color: #FAFCFB;
+}
+
+.tab:focused
+{
+  -fx-focus-color: transparent;
+}
+
+.tab-pane *.tab-header-background
+{
+    -fx-background-color: transparent;
+}
+
+.tab-pane:left *.tab-header-area
+{
+    -fx-background-insets: 0, 0 0 10;
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em;
+}
+
+.tab:selected .focus-indicator
+{
+    -fx-focus-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-color: black;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #565656;
+    -fx-background-radius: 5em;
+}
+
+.titled-pane {
+    -fx-text-fill: #a1a1a1;
+}
+
+.titled-pane:hover {
+    -fx-background-color: #181818;
+}
+
+.titled-pane > .title  {
+    -fx-background-radius: 0, 0, 0;
+    -fx-font: bold 14px System;
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.titled-pane:focused > .title > .arrow-button .arrow {
+    -fx-background-color: #a1a1a1;
+}
+
+.titled-pane:focused > *.content {
+    -fx-border-color: #121212;
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="824.0" prefWidth="1536.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="musicly.controllers.LoginController">
+   <children>
+      <AnchorPane fx:id="ekran" layoutX="768.0" prefHeight="824.0" prefWidth="768.0" style="-fx-background-color: #181818;">
+         <children>
+            <TextField fx:id="txtEmail" layoutX="209.0" layoutY="178.0" prefHeight="40.0" prefWidth="350.0" promptText="Email" style="-fx-background-color: #121212; -fx-text-fill: #fff;" />
+            <PasswordField fx:id="txtSifre" layoutX="209.0" layoutY="228.0" prefHeight="40.0" prefWidth="350.0" promptText="Şifre" style="-fx-background-color: #121212; -fx-text-fill: #fff;" />
+            <Label layoutX="259.0" layoutY="84.0" text="Giriş Yap" textFill="WHITE">
+               <font>
+                  <Font size="64.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLogin" layoutX="427.0" layoutY="306.0" mnemonicParsing="false" onAction="#girisButon" prefHeight="26.0" prefWidth="131.0" styleClass="giris-button" stylesheets="@../../css/style.css" text="Giriş" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblError" alignment="CENTER" layoutX="208.0" layoutY="278.0" prefHeight="18.0" prefWidth="350.0" textAlignment="CENTER" textFill="RED" />
+            <HBox alignment="CENTER_RIGHT" layoutX="668.0" prefHeight="40.0" prefWidth="66.0" spacing="3.0" style="-fx-background-color: transparent;">
+               <children>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#kucult" prefHeight="30.0" prefWidth="30.0" styleClass="kucult-button" stylesheets="@../../css/style.css" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/minimize.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="30.0" prefWidth="30.0" styleClass="kapat-button" stylesheets="@../../css/style.css">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/cikis.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets right="3.0" top="3.0" />
+               </padding>
+            </HBox>
+            <TextField fx:id="txtEmail2" layoutX="208.0" layoutY="483.0" prefHeight="40.0" prefWidth="350.0" promptText="Email" style="-fx-background-color: #121212; -fx-text-fill: #fff;" />
+            <PasswordField fx:id="txtSifre2" layoutX="208.0" layoutY="533.0" prefHeight="40.0" prefWidth="350.0" promptText="Şifre" style="-fx-background-color: #121212; -fx-text-fill: #fff;" />
+            <Label layoutX="274.0" layoutY="389.0" text="Kayıt Ol" textFill="WHITE">
+               <font>
+                  <Font size="64.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnKayit" layoutX="426.0" layoutY="689.0" mnemonicParsing="false" onAction="#kayitOl" prefHeight="26.0" prefWidth="131.0" styleClass="giris-button" stylesheets="@../../css/style.css" text="Kayıt Ol" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblError2" alignment="CENTER" layoutX="209.0" layoutY="661.0" prefHeight="18.0" prefWidth="350.0" textAlignment="CENTER" textFill="RED" />
+            <TextField fx:id="txtKullaniciAdi" layoutX="208.0" layoutY="583.0" prefHeight="40.0" prefWidth="350.0" promptText="Kullanıcı Adı" style="-fx-background-color: #121212; -fx-text-fill: #fff;" />
+            <RadioButton fx:id="normal" layoutX="287.0" layoutY="633.0" mnemonicParsing="false" text="Normal" textFill="WHITE" />
+            <RadioButton fx:id="premium" layoutX="422.0" layoutY="633.0" mnemonicParsing="false" text="Premium" textFill="WHITE" />
+            <ProgressIndicator fx:id="pi" layoutX="384.0" layoutY="306.0" prefHeight="31.0" prefWidth="26.0" progress="0.0" />
+            <ProgressIndicator fx:id="pi2" layoutX="384.0" layoutY="689.0" prefHeight="31.0" prefWidth="26.0" progress="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="824.0" prefWidth="768.0" style="-fx-background-color: #121212;">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="201.8" layoutX="285.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="260.0" layoutY="470.0" text="Hoşgeldiniz" textFill="#808bc9">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

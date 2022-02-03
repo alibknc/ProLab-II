@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="sonuc" alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="1294.0" styleClass="sarki" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="musicly.controllers.AramaListeController">
+   <children>
+      <Label fx:id="lblID" prefWidth="25.0" text="1" textFill="#b3b3b3">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Pane prefHeight="100.0" prefWidth="50.4" />
+      <ImageView fx:id="imgKapak" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/person.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblKullanici" layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="298.4" text="Ali Bakınç" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <Label fx:id="lblAbonelik" layoutX="38.0" layoutY="10.0" prefWidth="406.4" text="PREMIUM ÜYE" textFill="#b3b3b3">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Pane layoutX="48.0" layoutY="10.0" prefHeight="100.0" prefWidth="50.4" HBox.hgrow="ALWAYS" />
+      <Button fx:id="btnTakip" mnemonicParsing="false" onAction="#takipEt" styleClass="liste-button" stylesheets="@../../css/style.css" text="Takip Et">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <HBox.margin>
+            <Insets right="10.0" />
+         </HBox.margin>
+      </Button>
+   </children>
+   <padding>
+      <Insets left="30.0" right="30.0" />
+   </padding>
+</HBox>

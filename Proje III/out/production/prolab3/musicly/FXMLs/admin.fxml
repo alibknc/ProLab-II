@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="824.0" prefWidth="1536.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="musicly.controllers.AdminController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <ImageView fitHeight="82.0" fitWidth="54.3" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="musicly Admin Panel" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="173.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/user.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblUser" prefHeight="20.0" prefWidth="100.0" text="kullanıcı" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnCikis" alignment="CENTER" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="cikis-button" stylesheets="@../../css/style.css" text="Çıkış Yap" textFill="WHITE" />
+                  <HBox alignment="CENTER_RIGHT" prefHeight="82.0" prefWidth="0.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#kucult" prefHeight="30.0" prefWidth="30.0" styleClass="kucult-button" stylesheets="@../../css/style.css" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/minimize.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="30.0" prefWidth="30.0" styleClass="kapat-button" stylesheets="@../../css/style.css">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/cikis.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <TabPane prefHeight="824.0" prefWidth="1534.0" stylesheets="@../../css/style.css" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Şarkılar">
+                     <content>
+                        <BorderPane prefHeight="490.0" prefWidth="1000.0">
+                           <center>
+                              <TableView fx:id="tblSarki" editable="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+                                <columns>
+                                  <TableColumn fx:id="clmID" editable="false" maxWidth="3000.0" prefWidth="66.39999389648438" text="ID" />
+                                  <TableColumn fx:id="clmSarki" maxWidth="7500.0" prefWidth="130.4000244140625" text="Şarkı Adı" />
+                                    <TableColumn fx:id="clmSanatci" maxWidth="7500.0" prefWidth="84.00001525878906" text="Sanatçı" />
+                                    <TableColumn fx:id="clmAlbum" maxWidth="7000.0" prefWidth="85.60003662109375" text="Albüm" />
+                                    <TableColumn fx:id="clmTarih" prefWidth="72.0" text="Tarih" />
+                                    <TableColumn fx:id="clmTur" maxWidth="4000.0" prefWidth="72.79998779296875" text="Tür" />
+                                    <TableColumn fx:id="clmSure" maxWidth="4000.0" prefWidth="88.0" text="Süre" />
+                                    <TableColumn fx:id="clmDinlenme" editable="false" maxWidth="4000.0" prefWidth="5000.0" sortable="false" text="Dinlenme" />
+                                    <TableColumn fx:id="clmSil" editable="false" maxWidth="4000.0" prefWidth="79.9998779296875" sortable="false" text="Sil" />
+                                    <TableColumn fx:id="clmGuncelle" editable="false" maxWidth="4000.0" prefWidth="116.0001220703125" sortable="false" text="Güncelle" />
+                                </columns>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </center>
+                           <bottom>
+                              <HBox alignment="CENTER" prefHeight="50.0" prefWidth="1000.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="txtSarki" focusTraversable="false" prefWidth="200.0" promptText="Şarkı Adı" style="-fx-background-color: #181818; -fx-border-color: #fff; -fx-border-radius: 10; -fx-text-fill: #fff;" />
+                                    <TextField fx:id="txtSanatci" focusTraversable="false" layoutX="10.0" layoutY="10.0" promptText="Sanatçı ID" style="-fx-background-color: #181818; -fx-border-color: #fff; -fx-border-radius: 10; -fx-text-fill: #fff;" />
+                                    <TextField fx:id="txtAlbum" focusTraversable="false" layoutX="161.0" layoutY="10.0" promptText="Albüm ID" style="-fx-background-color: #181818; -fx-border-color: #fff; -fx-border-radius: 10; -fx-text-fill: #fff;" />
+                                    <TextField fx:id="txtTarih" focusTraversable="false" layoutX="312.0" layoutY="10.0" promptText="Tarih" style="-fx-background-color: #181818; -fx-border-color: #fff; -fx-border-radius: 10; -fx-text-fill: #fff;" />
+                                    <TextField fx:id="txtTur" focusTraversable="false" layoutX="464.0" layoutY="10.0" promptText="Tür" style="-fx-background-color: #181818; -fx-border-color: #fff; -fx-border-radius: 10; -fx-text-fill: #fff;" />
+                                    <TextField fx:id="txtSure" focusTraversable="false" layoutX="615.0" layoutY="10.0" promptText="Süre" style="-fx-background-color: #181818; -fx-border-color: #fff; -fx-border-radius: 10; -fx-text-fill: #fff;" />
+                                    <Button fx:id="btnEkleSarki" alignment="CENTER" mnemonicParsing="false" onAction="#sarkiEkle" style="-fx-background-color: #1ED760; -fx-border-color: #fff;" text="Ekle" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                           </bottom>
+                        </BorderPane>
+                     </content>
+                </Tab>
+                <Tab text="Sanatçılar">
+                     <content>
+                        <BorderPane prefHeight="490.0" prefWidth="1000.0">
+                           <center>
+                              <TableView fx:id="tblSanatci" editable="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+                                 <columns>
+                                    <TableColumn fx:id="clmID2" editable="false" prefWidth="59.199978828430176" text="ID" />
+                                    <TableColumn fx:id="clmSanatci2" prefWidth="113.5999755859375" text="Sanatçı Adı" />
+                                    <TableColumn fx:id="clmUlke" prefWidth="5000.0" text="Ülkesi" />
+                                    <TableColumn fx:id="clmSil2" editable="false" prefWidth="79.9998779296875" sortable="false" text="Sil" />
+                                    <TableColumn fx:id="clmGuncelle2" editable="false" prefWidth="116.0001220703125" sortable="false" text="Güncelle" />
+                                 </columns>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </center>
+                           <bottom>
+                              <HBox alignment="CENTER" prefHeight="50.0" prefWidth="1000.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="txtSanatciAdi" focusTraversable="false" prefHeight="27.0" prefWidth="240.0" promptText="Sanatçı Adı" style="-fx-background-color: #181818; -fx-border-color: #fff; -fx-border-radius: 10; -fx-text-fill: #fff;" />
+                                    <TextField fx:id="txtUlke" focusTraversable="false" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="240.0" promptText="Ülkesi" style="-fx-background-color: #181818; -fx-border-color: #fff; -fx-border-radius: 10; -fx-text-fill: #fff;" />
+                                    <Button fx:id="btnEkleSanatci" alignment="CENTER" mnemonicParsing="false" onAction="#sanatciEkle" style="-fx-background-color: #1ED760; -fx-border-color: #fff;" text="Ekle" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                           </bottom>
+                        </BorderPane>
+                     </content>
+                </Tab>
+                  <Tab text="Albümler">
+                     <content>
+                        <BorderPane prefHeight="490.0" prefWidth="1000.0">
+                           <center>
+                              <TableView fx:id="tblAlbum" editable="true" prefHeight="530.0" prefWidth="1536.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+                                 <columns>
+                                    <TableColumn fx:id="clmID3" editable="false" prefWidth="59.199978828430176" text="ID" />
+                                    <TableColumn fx:id="clmAlbum2" prefWidth="113.5999755859375" text="Albüm Adı" />
+                                    <TableColumn fx:id="clmSanatci3" prefWidth="84.00001525878906" text="Sanatçı" />
+                                    <TableColumn fx:id="clmTarih2" prefWidth="72.0" text="Tarih" />
+                                    <TableColumn fx:id="clmTur2" prefWidth="72.79998779296875" text="Tür" />
+                                    <TableColumn fx:id="clmSil3" editable="false" prefWidth="79.9998779296875" sortable="false" text="Sil" />
+                                    <TableColumn fx:id="clmGuncelle3" editable="false" prefWidth="116.0001220703125" sortable="false" text="Güncelle" />
+                                 </columns>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </center>
+                           <bottom>
+                              <HBox alignment="CENTER" prefHeight="50.0" prefWidth="1000.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="txtAlbumAdi" focusTraversable="false" prefHeight="27.0" prefWidth="200.0" promptText="Albüm Adı" style="-fx-background-color: #181818; -fx-border-color: #fff; -fx-border-radius: 10; -fx-text-fill: #fff;" />
+                                    <TextField fx:id="txtSanatciID" focusTraversable="false" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="200.0" promptText="Sanatçı ID" style="-fx-background-color: #181818; -fx-border-color: #fff; -fx-border-radius: 10; -fx-text-fill: #fff;" />
+                                    <TextField fx:id="txtTarihAlbum" focusTraversable="false" layoutX="312.0" layoutY="10.0" promptText="Tarih" style="-fx-background-color: #181818; -fx-border-color: #fff; -fx-border-radius: 10; -fx-text-fill: #fff;" />
+                                    <TextField fx:id="txtTurAlbum" focusTraversable="false" layoutX="464.0" layoutY="10.0" promptText="Tür" style="-fx-background-color: #181818; -fx-border-color: #fff; -fx-border-radius: 10; -fx-text-fill: #fff;" />
+                                    <Button fx:id="btnEkleAlbum" alignment="CENTER" mnemonicParsing="false" onAction="#albumEkle" style="-fx-background-color: #1ED760; -fx-border-color: #fff;" text="Ekle" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                           </bottom>
+                        </BorderPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+         <opaqueInsets>
+            <Insets left="20.0" />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

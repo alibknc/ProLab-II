@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TitledPane fx:id="titledPane" animated="false" stylesheets="@../../css/style.css" text="Ayse" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="musicly.controllers.TakipListeController">
+   <content>
+      <AnchorPane fx:id="pane" minHeight="0.0" minWidth="0.0" prefHeight="91.2" prefWidth="200.0" styleClass="secondary-color" stylesheets="@../../css/style.css">
+         <children>
+            <VBox fx:id="liste" prefHeight="91.2" prefWidth="200.0" style="-fx-background-color: transparent;">
+               <children>
+                  <Label fx:id="listPop" onMouseClicked="#listeCagir" prefHeight="30.0" prefWidth="200.0" styleClass="anaSayfa-button" stylesheets="@../../css/style.css" text="Pop" textFill="#a1a1a1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="listJazz" onMouseClicked="#listeCagir" prefHeight="30.0" prefWidth="200.0" styleClass="anaSayfa-button" stylesheets="@../../css/style.css" text="Jazz" textFill="#a1a1a1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="listKlasik" onMouseClicked="#listeCagir" prefHeight="30.0" prefWidth="200.0" styleClass="anaSayfa-button" stylesheets="@../../css/style.css" text="Klasik" textFill="#a1a1a1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </content>
+   <font>
+      <Font name="System Bold" size="14.0" />
+   </font>
+</TitledPane>
